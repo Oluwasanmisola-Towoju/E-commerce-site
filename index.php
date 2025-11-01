@@ -33,7 +33,7 @@
         </nav>
 
         <div>
-            <img class="my_cover" src="cover.jpeg" alt="dim(6912 x 3456)">
+            <img class="my_cover" src="cover.png" alt="dim(6912 x 3456)">
         </div>
     <div>
         <h3 class="p_title">
@@ -43,12 +43,12 @@
 
         <div class="my_card">
             <div class="card">
-                    <img class="p_image" src="watch.jpeg">
+                    <img class="p_image" src="./images/watch.jpeg">
                         <h4>
                             Watch
                         </h4>
                             <p>
-                                Watch description
+                                The Hublot watch is a Swiss luxury watch defined by the "Art of Fusion", blending precious gold with modern materials like ceramic and rubber. It features a bold, recognizable porthole-shaped case and H-screws, exemplified by the flagship Big Bang collection. Hublot movements, such as the in-house Unico, are often skeletonized for mechanical display. It represents a sporty, avant-garde style in high-end horology
                             </p>
                             <p>
                                 Price: $50
@@ -56,12 +56,12 @@
                                <a href="#">Buy now</a>
             </div>
             <div class="card">
-                    <img class="p_image" src="phone.jpeg">
+                    <img class="p_image" src="./images/air.jpg">
                         <h4>
                             Phone
                         </h4>
                             <p>
-                                Phone description
+                                This is an ultra-premium model characterized by its revolutionary thinness and lightness, measuring just 5.6mm thick with a Grade 5 titanium frame. It boasts a stunning 6.5-inch Super Retina XDR display featuring ProMotion's fluid 120Hz adaptive refresh rate. Powered by the high-performance Apple A19 Pro chip, it offers incredible speed and advanced on-device AI capabilities. The design includes a durable Ceramic Shield 2 and features like the versatile Action button
                             </p>
                             <p>
                                 Price: $50
@@ -69,12 +69,12 @@
                                 <a href="#">Buy now</a>
             </div>
             <div class="card">
-                    <img class="p_image" src="shoe.jpeg">
+                    <img class="p_image" src="./images/shoe.jpg">
                         <h4>
                             Shoe
                         </h4>
                             <p>
-                                Shoe description
+                                The Air Force 1 is a legendary sneaker that debuted in 1982 as a basketball shoe and quickly became a streetwear icon. It was the first Nike shoe to incorporate "Air" cushioning technology in its sole, providing lightweight comfort and impact absorption. The design is instantly recognizable by its classic, slightly chunky construction, often featuring a smooth leather upper. It is available in popular Low, Mid, and High-top silhouettes.
                             </p>
                             <p>
                                 Price: $50

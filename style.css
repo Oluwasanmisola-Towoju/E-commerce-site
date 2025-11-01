@@ -139,21 +139,26 @@ nav ul li a:hover{
     margin: 10px;
     font-weight: bold;
 }
+
 .footer_content p{
     color: white;
     padding: 15px;
 }
+
 .footer_content a{
     color: white;
 }
+
 .footer_content a:hover{
     color: aqua;
     background: white;
 }
+
 .footer .footer_content{
     display: flex;
     justify-content: space-evenly;
 }
+
 @media(max-width:650px) {
     .footer .footer_content{
         display: flex;
