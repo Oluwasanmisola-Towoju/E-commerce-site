@@ -33,7 +33,7 @@
         </nav>
 
         <div>
-            <img class="my_cover" src="cover.png" alt="dim(6912 x 3456)">
+            <img class="my_cover" src="cover.jpg" alt="dim(6912 x 3456)">
         </div>
     <div>
         <h3 class="p_title">
@@ -86,62 +86,62 @@
             <div class="footer_title">
                 <h3>My Ecommerce Site</h3>
             </div>
-                <div class="footer_content">
+            <div class="footer_content">
+                <div>
+                    <h4>Services</h4>
+                    <p>
+                        <a href="#">Web</a>
+                    </p>
+                    <p>
+                        <a href="#">App</a>
+                    </p>
+                    <p>
+                        <a href="#">Digital</a>
+                    </p>
                 </div>
-                    <div>
-                        <h4>Services</h4>
-                        <p>
-                            <a href="#">Web</a>
-                        </p>
-                        <p>
-                            <a href="#">App</a>
-                        </p>
-                        <p>
-                            <a href="#">Digital</a>
-                        </p>
-                    </div>
-                    <div>
-                        <h4>Social links</h4>
-                        <p>
-                            <a href="#">Facebook</a>
-                        </p>
-                        <p>
-                            <a href="#">X</a>
-                        </p>
-                        <p>
-                            <a href="#">Instagram</a>
-                        </p>
-                    </div>
-                    <div>
-                        <h4>Quick links</h4>
-                        <p>
-                            <a href="#">Home</a>
-                        </p>
-                        <p>
-                            <a href="#">Products</a>
-                        </p>
-                        <p>
-                            <a href="#">Contact</a>
-                        </p>
-                        <p>
-                            <a href="#">Register</a>
-                        </p>
-                        <p>
-                            <a href="#">Login</a>
-                        </p>
-                    </div>
-                    <div>
-                        <h4>Location</h4>
-                        <p>
-                            Western Union Street
-                        </p>
-                        <p>
-                            Email: myecomm@gmail.com
-                        </p>
-                        <p>
-                            Phone: 09019648094
-                        </p>
-                    </div>
+                <div>
+                    <h4>Social links</h4>
+                    <p>
+                        <a href="#">Facebook</a>
+                    </p>
+                    <p>
+                        <a href="#">X</a>
+                    </p>
+                    <p>
+                        <a href="#">Instagram</a>
+                    </p>
+                </div>
+                <div>
+                    <h4>Quick links</h4>
+                    <p>
+                        <a href="#">Home</a>
+                    </p>
+                    <p>
+                        <a href="#">Products</a>
+                    </p>
+                    <p>
+                        <a href="#">Contact</a>
+                    </p>
+                    <p>
+                        <a href="#">Register</a>
+                    </p>
+                    <p>
+                        <a href="#">Login</a>
+                    </p>
+                </div>
+                <div>
+                    <h4>Location</h4>
+                    <p>
+                        Western Union Street
+                    </p>
+                    <p>
+                        Email: myecomm@gmail.com
+                    </p>
+                    <p>
+                        Phone: 09019648094
+                    </p>
+                </div>
+            </div>
 
             <footer>
                 <hr/>

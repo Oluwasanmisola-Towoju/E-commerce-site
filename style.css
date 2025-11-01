@@ -100,7 +100,12 @@ nav ul li a:hover{
 }
 .p_image{
     width: 100%;
-    height: 250px;
+    height: 350px;
+    object-fit: cover;     
+    object-position: center;
+    display: block;
+    align-items: center;
+    align-self: center;
 }
 
 .card h4{
@@ -112,7 +117,7 @@ nav ul li a:hover{
 }
 .card a{
     padding: 10px;
-    background: skyblue;
+    background: gold;
     border-radius: 10%;
     margin: 10px;
 }
@@ -123,6 +128,7 @@ nav ul li a:hover{
 .footer{
     background: black;
     width: 100%;
+    padding: 30px 10px;
 }
 .footer_title{
     color: white;
@@ -150,13 +156,32 @@ nav ul li a:hover{
 }
 
 .footer_content a:hover{
-    color: aqua;
-    background: white;
+    color: gold;
 }
 
 .footer .footer_content{
     display: flex;
     justify-content: space-evenly;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer .footer_content > div{
+    flex: 1 1 200px; 
+    padding: 10px;
+}
+
+footer{
+    text-align: center;
+    color: white;
+    padding: 12px 0;
+}
+
+.footer hr{
+    border: none;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    margin: 12px 0;
 }
 
 @media(max-width:650px) {
