@@ -142,6 +142,11 @@
                             Phone: 09019648094
                         </p>
                     </div>
+
+            <footer>
+                <hr/>
+                <h3>Copyright @charles 2025</h3>
+            </footer>
         </div>
     </body>
 </html>
