@@ -24,7 +24,7 @@
                     <a href="#">Contact</a>
                 </li>
                 <li>
-                    <a href="#">Register</a>
+                    <a href="home/register.php">Register</a>
                 </li>
                 <li>
                     <a href="#">Login</a>
@@ -123,7 +123,7 @@
                         <a href="#">Contact</a>
                     </p>
                     <p>
-                        <a href="#">Register</a>
+                        <a href="home/register.php">Register</a>
                     </p>
                     <p>
                         <a href="#">Login</a>
