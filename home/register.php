@@ -39,7 +39,13 @@
                     </label>
                     <input type="text" name="address">
                 </div>
-                                <div class="input_deg">
+                <div class="input_deg">
+                    <label>
+                        Password:
+                    </label>
+                    <input type="password" name="password">
+                </div>
+                        <div class="input_deg">
                     <label>
                         Submit:
                     </label>

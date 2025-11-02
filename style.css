@@ -222,9 +222,10 @@ footer h3{
 .input_deg label{
     width: 100px;
     display: inline-block;
+    font-size: 16px;
 }
 
-input[type='text'],[type='email'],[type='number']{
+input[type='text'],[type='email'],[type='number'],[type='password']{
     width: 40%;
     padding: 12px;
     resize: vertical;
