@@ -1,3 +1,38 @@
+<?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+$conn = mysqli_connect("localhost", "root", "", "php_e-comm");
+
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+if(isset($_POST['register'])){
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $phone = $_POST['phone'];  // Changed from number to phone to match form field
+    $address = $_POST['address'];
+    $pass = $_POST['password'];
+    $usertype = "user";
+
+    $sql = "INSERT INTO user (name,email,password,phone,address,usertype) VALUES ('$name', '$email', '$pass', '$phone', '$address', '$usertype')";
+
+    $data = mysqli_query($conn, $sql);
+
+    if($data){
+        echo "Success";
+    } else {
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+}
+?>
+
+
+
+
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -14,7 +49,7 @@
             <h2>
                 Register Form
             </h2>
-            <form>
+            <form action="register.php" method="POST">
                 <div class="input_deg">
                     <label>
                         Name:
