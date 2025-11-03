@@ -1,3 +1,30 @@
+<?php
+$conn = mysqli_connect("localhost", "root", "", "php_e-comm");
+
+if(!$conn){
+    die("connection failed: " . mysqli_connect_error());
+}
+
+if (isset($_POST['login'])){
+    $email = $_POST['email'];
+    $pass = $_POST['password'];
+    $sql = "SELECT * from user Where email = '".$email."' AND password = '".$pass."'";
+
+    $result = mysqli_query($conn, $sql);
+    $row = mysqli_fetch_array($result);
+
+    if($row['usertype']=="user"){
+        header("location:userpage.php");
+    }
+    elseif($row['usertype']=="admin"){
+        header("location:../admin/adminpage.php");
+    }
+    else{
+        echo "Username or Password is wrong";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
