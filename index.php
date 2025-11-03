@@ -27,7 +27,7 @@
                     <a href="home/register.php">Register</a>
                 </li>
                 <li>
-                    <a href="#">Login</a>
+                    <a href="home/login.php">Login</a>
                 </li>
             </ul>
         </nav>
@@ -126,7 +126,7 @@
                         <a href="home/register.php">Register</a>
                     </p>
                     <p>
-                        <a href="#">Login</a>
+                        <a href="home/login.php">Login</a>
                     </p>
                 </div>
                 <div>
