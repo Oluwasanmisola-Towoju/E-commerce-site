@@ -1,3 +1,15 @@
+<?php
+session_start();
+
+if(!isset($_SESSION['user_email'])){
+    header("location:../home/login.php");
+}
+
+elseif($_SESSION['usertype']=="user"){
+    header("location:../home/login.php");
+}
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -8,5 +20,7 @@
     </head>
     <body>
         adminpage
+
+        <a href="../logout.php">Logout</a>
     </body>
 </html>
