@@ -30,7 +30,7 @@ elseif($_SESSION['usertype']=="user"){
                         <a href="#">Users</a>
                     </li>
                     <li>
-                        <a href="#">Add Products</a>
+                        <a href="add_product.php">Add Products</a>
                     </li>
                     <li>
                         <a href="#">View Products</a>

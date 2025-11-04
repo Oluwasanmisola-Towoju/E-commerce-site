@@ -58,3 +58,26 @@
     margin-top: 120px;
     padding: 10px;
 }
+
+.my_form{
+    margin-left: 30px;
+}
+label{
+    display: inline-block;
+    width: 150px;
+    font-size: 15px;
+}
+.div_deg{
+    padding: 15px;
+}
+input[type='text'],[type='number']{
+    width: 30%;
+    padding: 12px;
+    resize: vertical;
+    box-sizing: border-box;
+}
+textarea{
+    width: 30%;
+    height: 200px;
+    text-align: justify;
+}
