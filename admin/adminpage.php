@@ -15,12 +15,38 @@ elseif($_SESSION['usertype']=="user"){
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="../style.css">
+        <link rel="stylesheet" type="text/css" href="admin_style.css">
         <title></title>
     </head>
     <body>
-        adminpage
+        <div class="wrapper">
+            <div class="sidebar">
+                <h2>Ecomm Admin</h2>
+                <ul>
+                    <li>
+                        <a href="#">Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="#">Users</a>
+                    </li>
+                    <li>
+                        <a href="#">Add Products</a>
+                    </li>
+                    <li>
+                        <a href="#">View Products</a>
+                    </li>
+                </ul>
+            </div>
 
-        <a href="../logout.php">Logout</a>
+            <div class="header">
+                <div class="admin_header">
+                    <a href="../logout.php">Logout</a>
+                </div>
+                <div class="info">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis aperiam dolorem distinctio tempore omnis, excepturi ex vitae quam quis voluptates accusantium dolorum in alias obcaecati assumenda laudantium nihil pariatur vero.
+                    </p>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
