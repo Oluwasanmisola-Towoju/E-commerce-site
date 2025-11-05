@@ -11,11 +11,15 @@
     position: relative;
 }
 .wrapper .sidebar{
-    background: black;
+    background: rgba(0, 0, 0, 0.85);
     width: 200px;
     height: 100%;
     position: fixed;
     padding: 30px 0px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-right: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 5px 0 15px rgba(0,0,0,0.2);
 }
 .wrapper .sidebar h2{
     color: white;
@@ -23,6 +27,7 @@
     text-transform: uppercase;
     font-size: 20px;
     text-align: center;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 .wrapper .sidebar ul li{
     padding: 18px;
@@ -31,11 +36,33 @@
     color: white;
     font-size: 16px;
 }
+.wrapper .sidebar ul li {
+    transition: background-color 0.3s ease;
+}
+.wrapper .sidebar ul li a {
+    transition: all 0.3s ease;
+    position: relative;
+    display: block;
+}
+.wrapper .sidebar ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: lightblue;
+    transition: width 0.3s ease;
+}
 .wrapper .sidebar ul li a:hover{
     color: lightblue;
+    transform: translateX(5px);
 }
 .wrapper .sidebar ul li:hover{
-    background: gray;
+    background: rgba(128, 128, 128, 0.3);
+}
+.wrapper .sidebar ul li:hover a::after {
+    width: 100%;
 }
 
 .header{
@@ -43,16 +70,28 @@
     width: 100%;
 }
 .header .admin_header{
-    background: black;
+    background: rgba(0, 0, 0, 0.75);
     padding: 15px;
     width: 100%;
     height: 70px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 .header .admin_header a{
     float: right;
-    background: skyblue;
-    padding: 10px;
-    border-radius: 15px;
+    background: rgba(135, 206, 235, 0.9);
+    padding: 10px 20px;
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+.header .admin_header a:hover {
+    transform: translateY(-2px);
+    background: rgba(135, 206, 235, 1);
 }
 .info{
     margin-top: 120px;
@@ -82,16 +121,44 @@ textarea{
     text-align: justify;
 }
 table{
-    border: 2px solid black;
+    border: 1px solid rgba(0,0,0,0.1);
     margin-left: 10%;
     width: 70%;
     margin-top: 30px;
+    border-radius: 12px;
+    overflow: hidden;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    background: rgba(255,255,255,0.05);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    animation: tableAppear 0.8s ease-out forwards;
+}
+
+@keyframes tableAppear {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Add hover effect to table rows */
+tr {
+    transition: background-color 0.3s ease;
+}
+tr:hover {
+    background-color: rgba(255,255,255,0.05);
 }
 th{
-    background: skyblue;
-    padding: 10px;
+    background: rgba(135, 206, 235, 0.9);
+    padding: 12px;
     text-align: center;
     font-weight: bold;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
 }
 td{
     padding: 10px;
@@ -99,8 +166,46 @@ td{
     text-align: center;
 }
 .del_btn{
-    background: red;
-    padding: 7px;
+    background: rgba(255, 0, 0, 0.9);
+    padding: 7px 14px;
     border-radius: 10px;
     color: white;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.del_btn:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 0, 0, 1);
+}
+
+/* Fallback for browsers that don't support backdrop-filter */
+@supports not (backdrop-filter: blur(10px)) {
+    .wrapper .sidebar {
+        background: rgba(0, 0, 0, 0.95);
+    }
+    .header .admin_header {
+        background: rgba(0, 0, 0, 0.95);
+    }
+    table {
+        background: rgba(255, 255, 255, 0.95);
+    }
+}
+
+/* Reduce motion/transparency if user prefers */
+@media (prefers-reduced-motion: reduce) {
+    .header .admin_header a, .del_btn {
+        transition: none;
+    }
+}
+@media (prefers-reduced-transparency: reduce) {
+    .wrapper .sidebar,
+    .header .admin_header,
+    table,
+    .header .admin_header a,
+    .del_btn {
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+    }
 }

@@ -33,8 +33,13 @@ nav ul li a{
     text-transform: uppercase;
     color: aliceblue;
 }
+nav ul li a{
+    transition: color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+}
 nav ul li a:hover{
     color: gold;
+    transform: translateY(-2px);
 }
 .checkbtn{
     float: right;
@@ -90,13 +95,33 @@ nav ul li a:hover{
 .card{
     max-width: 330px;
     text-align: center;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1);
     margin: 15px;
-    padding: 15px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: cardFloat 1s ease-out forwards;
+}
+
+@keyframes cardFloat {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .card:hover{
-    box-shadow: 0 14px 18px 0 rgb(151, 124, 3);
+    transform: translateY(-5px);
+    box-shadow: 0 14px 28px rgba(151, 124, 3, 0.4);
+    background: rgba(255,255,255,0.12);
 }
 .p_image{
     width: 100%;
@@ -116,14 +141,33 @@ nav ul li a:hover{
     margin: 10px;
 }
 .card a{
-    padding: 10px;
+    padding: 10px 20px;
     background: gold;
-    border-radius: 10%;
+    border-radius: 10px;
     margin: 10px;
+    display: inline-block;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 .card a:hover{
     background: black;
     color: gold;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+.card a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: 0.5s;
+}
+.card a:hover::after {
+    left: 100%;
 }
 .footer{
     background: black;
@@ -200,23 +244,68 @@ footer h3{
     font-size: 22px;
 }
 
+/* Fallback for browsers that don't support backdrop-filter */
+@supports not (backdrop-filter: blur(10px)) {
+    .card {
+        background: rgba(255, 255, 255, 0.95);
+    }
+    .my_form {
+        background: rgba(255, 215, 0, 0.95);
+    }
+}
+
+/* Reduce motion/transparency if user prefers */
+@media (prefers-reduced-motion: reduce) {
+    .card, .my_form {
+        transition: none;
+    }
+}
+@media (prefers-reduced-transparency: reduce) {
+    .card, .my_form {
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+    }
+}
+
 /* STYLE FOR REGISTER.PHP */ 
 .input_deg{
     padding: 10px;
 }
 
 .my_form{
-    background: gold;
+    background: rgba(255, 215, 0, 0.15);
     width: 60%;
     margin: auto;
     text-align: center;
     margin-top: 200px;
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 25px;
+    animation: formAppear 0.6s ease-out forwards;
+}
+
+@keyframes formAppear {
+    0% {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 .my_form h2{
-    background: black;
+    background: rgba(0, 0, 0, 0.8);
     color: white;
-    padding: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
 }
 
 .input_deg label{
@@ -230,6 +319,43 @@ input[type='text'],[type='email'],[type='number'],[type='password']{
     padding: 12px;
     resize: vertical;
     box-sizing: border-box;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    background: rgba(255,255,255,0.08);
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+input[type='text']:focus,
+input[type='email']:focus,
+input[type='number']:focus,
+input[type='password']:focus {
+    border-color: rgba(255, 215, 0, 0.5);
+    box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.1);
+    background: rgba(255,255,255,0.12);
+    transform: translateY(-1px);
+}
+
+input[type=submit] {
+    background: darkblue;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+input[type=submit]:hover {
+    background: rgb(0, 0, 150);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+input[type=submit]:active {
+    transform: translateY(0);
 }
 
 input[type=submit]{
