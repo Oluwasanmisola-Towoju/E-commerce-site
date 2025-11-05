@@ -56,7 +56,7 @@ $data = mysqli_query($conn,$sql);
                         <a href="add_product.php">Add Products</a>
                     </li>
                     <li>
-                        <a href="#">View Products</a>
+                        <a href="display_products.php">View Products</a>
                     </li>
                 </ul>
             </div>

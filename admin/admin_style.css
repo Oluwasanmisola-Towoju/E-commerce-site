@@ -81,3 +81,20 @@ textarea{
     height: 200px;
     text-align: justify;
 }
+table{
+    border: 2px solid black;
+    margin-left: 10%;
+    width: 70%;
+    margin-top: 30px;
+}
+th{
+    background: skyblue;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+td{
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
