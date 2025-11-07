@@ -78,6 +78,9 @@ elseif($_SESSION['usertype']=="user"){
                             <th>
                                 Delete
                             </th>
+                            <th>
+                                Update
+                            </th>
                         </tr>
 
                         <?php
@@ -107,6 +110,9 @@ elseif($_SESSION['usertype']=="user"){
                             </td>
                             <td>
                                 <a onclick="return confirm('Are you sure you want to delete this');"  class="del_btn" href="display_products.php?id=<?php echo $row['id']?>">Delete</a>
+                            </td>
+                            <td>
+                                <a href="update_product.php?id=<?php echo $row['id'] ?>" class="upd_btn">Update</a>
                             </td>
                         </tr>
                         <?php

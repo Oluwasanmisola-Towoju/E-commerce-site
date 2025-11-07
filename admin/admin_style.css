@@ -209,3 +209,10 @@ td{
         -webkit-backdrop-filter: none;
     }
 }
+
+.upd_btn{
+    background: blue;
+    padding: 7px;
+    border-radius: 10px;
+    color: white;
+}

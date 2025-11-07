@@ -86,13 +86,12 @@ $data = mysqli_query($conn,$sql);
                                 <input type="number" name="qty">
                             </div>
                             <div class="div_deg">
-                                <input type="submit" name="add_product" value="Add Product">
-                            </div>
-                            <div class="div_deg">
                                 <label for="">Product Image</label>
                                 <input type="file" name="my_image">
                             </div>
-
+                            <div class="div_deg">
+                                <input type="submit" name="add_product" value="Add Product">
+                            </div>
                         </form>
                     </div>
                 </div>
