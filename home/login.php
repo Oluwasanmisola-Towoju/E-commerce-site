@@ -21,7 +21,7 @@ if (isset($_POST['login'])){
         $_SESSION['user_email']=$email;
         $_SESSION['usertype']="user";
 
-        header("location:userpage.php");
+        header("location:../index.php");
     }
     elseif($row['usertype']=="admin"){
         $_SESSION['user_email']=$email;
