@@ -43,6 +43,14 @@ $result = mysqli_query($conn,$sql);
                     if($_SESSION['user_email']){
 
                 ?>
+                    <a style="transition: color 0.3s ease,
+                              transform 0.2s ease;
+                              display: inline-block;
+                              background: skyblue;
+                              color: white;
+                              padding: 10px;
+                              border-radius: 14px"
+                         class="logout_btn" href="user_order.php?email<?php echo $_SESSION['user_email']  ?>">ORDERS</a>
 
                     <a style="transition: color 0.3s ease,
                               transform 0.2s ease;
