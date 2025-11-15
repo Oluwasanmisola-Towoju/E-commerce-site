@@ -67,6 +67,7 @@ $result = mysqli_query($conn,$sql);
                             <th>Price</th>
                             <th>Image</th>
                             <th>Status</th>
+                            <th>Change Status</th>
                         </tr>
 
                         <?php
@@ -83,6 +84,9 @@ $result = mysqli_query($conn,$sql);
                                     <img width="100" height="100" src="../product_images/<?php echo $row['image'] ?>">
                                 </td>
                                 <td><?php echo $row['status'] ?></td>
+                                <td>
+                                    <a class="del_btn" href="update_order.php?id=<?php echo $row['id'] ?>">Delivered</a>
+                                </td>
                             </tr>
                         <?php
                             }
