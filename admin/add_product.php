@@ -47,7 +47,7 @@ $data = mysqli_query($conn,$sql);
                 <h2>Ecomm Admin</h2>
                 <ul>
                     <li>
-                        <a href="#">Dashboard</a>
+                        <a href="adminpage.php">Dashboard</a>
                     </li>
                     <li>
                         <a href="#">Users</a>
@@ -57,6 +57,9 @@ $data = mysqli_query($conn,$sql);
                     </li>
                     <li>
                         <a href="display_products.php">View Products</a>
+                    </li>
+                    <li>
+                        <a href="all_orders.php">Orders</a>
                     </li>
                 </ul>
             </div>

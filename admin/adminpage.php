@@ -24,7 +24,7 @@ elseif($_SESSION['usertype']=="user"){
                 <h2>Ecomm Admin</h2>
                 <ul>
                     <li>
-                        <a href="#">Dashboard</a>
+                        <a href="adminpage.php">Dashboard</a>
                     </li>
                     <li>
                         <a href="#">Users</a>
@@ -34,6 +34,9 @@ elseif($_SESSION['usertype']=="user"){
                     </li>
                     <li>
                         <a href="display_products.php">View Products</a>
+                    </li>
+                    <li>
+                        <a href="all_orders.php">Orders</a>
                     </li>
                 </ul>
             </div>
