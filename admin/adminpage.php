@@ -27,7 +27,7 @@ elseif($_SESSION['usertype']=="user"){
                         <a href="adminpage.php">Dashboard</a>
                     </li>
                     <li>
-                        <a href="#">Users</a>
+                        <a href="users.php">Users</a>
                     </li>
                     <li>
                         <a href="add_product.php">Add Products</a>

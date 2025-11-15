@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 $conn = mysqli_connect("localhost", "root", "", "php_e-comm");
 
 if(!isset($_SESSION['user_email'])){
@@ -10,7 +11,8 @@ elseif($_SESSION['usertype']=="user"){
     header("location:../home/login.php");
 }
 
-$sql = "SELECT * from orders";
+$is_user = "user";
+$sql = "SELECT * from user where usertype='$is_user'";
 $result = mysqli_query($conn,$sql);
 ?>
 
@@ -50,48 +52,27 @@ $result = mysqli_query($conn,$sql);
                     <a href="../logout.php">Logout</a>
                 </div>
                 <div class="info">
-                    <h1>
-                        All Orders
-                    </h1>
+                    <h1>ALL USERS</h1>
                     <table>
                         <tr>
-                            <th>
-                                Customer Name
-                            </th>
-                            <th>
-                                Email
-                            </th>
-                            <th>Address</th>
+                            <th>User Name</th>
+                            <th>Email</th>
                             <th>Phone</th>
-                            <th>Product Title</th>
-                            <th>Price</th>
-                            <th>Image</th>
-                            <th>Status</th>
-                            <th>Change Status</th>
+                            <th>Address</th>
                         </tr>
-
+                        
                         <?php
-                            while($row = mysqli_fetch_assoc($result)){
+                            while($row=mysqli_fetch_assoc($result)){
                         ?>
-                            <tr>
-                                <td><?php echo $row['username'] ?></td>
-                                <td><?php echo $row['email'] ?></td>
-                                <td><?php echo $row['address'] ?></td>
-                                <td><?php echo $row['phone'] ?></td>
-                                <td><?php echo $row['title'] ?></td>
-                                <td><?php echo $row['price'] ?></td>
-                                <td>
-                                    <img width="100" height="100" src="../product_images/<?php echo $row['image'] ?>">
-                                </td>
-                                <td><?php echo $row['status'] ?></td>
-                                <td>
-                                    <a class="del_btn" href="update_order.php?id=<?php echo $row['id'] ?>">Delivered</a>
-                                </td>
-                            </tr>
+                        <tr>
+                            <td><?php echo $row['name'] ?></td>
+                            <td><?php echo $row['email'] ?></td>
+                            <td><?php echo $row['phone'] ?></td>
+                            <td><?php echo $row['address'] ?></td>
+                        </tr>
                         <?php
                             }
                         ?>
-                        
                     </table>
                 </div>
             </div>
