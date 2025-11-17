@@ -6,10 +6,15 @@ error_reporting(0);
 
 $conn = mysqli_connect("localhost", "root", "", "php_e-comm");
 
-$sql = "SELECT * from products";
-
-$result = mysqli_query($conn,$sql);
-
+if(isset($_GET['search'])){
+    $search_value = $_GET['my_search'];
+    $sql = "SELECT * from products Where concat(title,description) LIKE '%$search_value%' ";
+    $result = mysqli_query($conn,$sql);
+}
+else{
+    $sql = "SELECT * from products";
+    $result = mysqli_query($conn,$sql);
+}
 ?>
 
 
@@ -87,6 +92,18 @@ $result = mysqli_query($conn,$sql);
         <h3 class="p_title">
             Products
         </h3>
+    </div>
+
+    <div style="margin-left: auto;
+                margin-right: auto;
+                padding: 100px;
+                align-items: center;
+                width: 400px;"
+    >
+        <form action="" method="GET">
+            <input style="width: 50%;" type="text" name="my_search" placeholder="Search your products...">
+            <input type="submit" name="search" value="search">
+        </form>
     </div>
 
         <div class="my_card">
