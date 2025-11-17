@@ -46,7 +46,7 @@ else{
                     <a href="product.php">Product</a>
                 </li>
                 <li>
-                    <a href="#">Contact</a>
+                    <a href="contact.php">Contact</a>
                 </li>
 
                 <?php
