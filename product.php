@@ -89,10 +89,6 @@ else{
                 ?>
             </ul>
         </nav>
-
-        <div>
-            <img class="my_cover" src="cover.jpg" alt="dim(6912 x 3456)">
-        </div>
     <div>
         <h3 class="p_title">
             Products
