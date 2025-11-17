@@ -216,3 +216,25 @@ td{
     border-radius: 10px;
     color: white;
 }
+
+.my_card{
+    background: black;
+    width: 200px;
+    color: white;
+    margin: 10px;
+}
+
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.my_card h3{
+    padding: 10px;    
+}
+
+p{
+    text-align: center;
+    padding: 10px;
+} 
